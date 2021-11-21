@@ -14,6 +14,8 @@ namespace cricarba.RememberMe.bot.Implementations
             remiderStrategy.Add(ReminderType.FullReminder, new FullReminder());
             remiderStrategy.Add(ReminderType.ShortReminder, new ShortReminder());
             remiderStrategy.Add(ReminderType.TomorrowReminder, new TomorrowReminder());
+            remiderStrategy.Add(ReminderType.TodayReminder, new TodayReminder());
+            remiderStrategy.Add(ReminderType.DaysReminder, new DaysReminder());
         }
 
         public Reminder GetReminder(ReminderType type, string message)

@@ -6,6 +6,7 @@
         FullReminder = 1,
         ShortReminder = 2,
         TomorrowReminder = 3,
-        DaysReminder = 4
+        DaysReminder = 4,
+        TodayReminder = 5
     }
 }

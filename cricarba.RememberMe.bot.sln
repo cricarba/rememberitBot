@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cricarba.RememberMe.bot", "cricarba.RememberMe.bot\cricarba.RememberMe.bot.csproj", "{5F9B820C-3B96-4E1A-9E1D-07E7082D3F58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cricarba.RememberMe.bot", "cricarba.RememberMe.bot\cricarba.RememberMe.bot.csproj", "{5F9B820C-3B96-4E1A-9E1D-07E7082D3F58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cricarba.RememberMe.Bot.Test", "cricarba.RememberMe.Bot.Test\cricarba.RememberMe.Bot.Test.csproj", "{35CFEDE5-4B09-4ECD-8D52-417EECF5AF84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5F9B820C-3B96-4E1A-9E1D-07E7082D3F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F9B820C-3B96-4E1A-9E1D-07E7082D3F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F9B820C-3B96-4E1A-9E1D-07E7082D3F58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35CFEDE5-4B09-4ECD-8D52-417EECF5AF84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35CFEDE5-4B09-4ECD-8D52-417EECF5AF84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35CFEDE5-4B09-4ECD-8D52-417EECF5AF84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35CFEDE5-4B09-4ECD-8D52-417EECF5AF84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
