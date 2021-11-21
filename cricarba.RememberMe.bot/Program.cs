@@ -14,6 +14,7 @@ using cricarba.RememberMe.bot.Interfaces;
 using cricarba.RememberMe.bot.Implementations.Validates;
 using cricarba.RememberMe.bot.Implementations;
 using System.Text;
+using cricarba.RememberMe.bot.Properties;
 
 namespace cricarba.RememberMe.bot
 {
@@ -89,20 +90,7 @@ namespace cricarba.RememberMe.bot
             else
             {
                 StringBuilder messageError = new StringBuilder();
-                messageError.Append("\n\n Para ayudarte a recordar puedes hacerlo de diferentes formas ");
-                messageError.Append("\n\n 🐢 La forma larga 🐢 ");
-                messageError.Append("\n\n *Recuerdame* lo que quieres que te recuerde *el día* dd/mm/aaaa *a las* hh:mm");
-                messageError.Append("\n\n 👉 *Recuerdame* ir a cine *el día* 24/09/2021 *a las* 18:00");
-                messageError.Append("\n\n 🚀 La forma corta 🚀");
-                messageError.Append("\n\n *-R* lo que quieres que te recuerde *-D* dd/mm/aaaa *-H* hh:mm");
-                messageError.Append("\n\n 👉 *-R* comprar leche *-D* 24/09/2021 *-H* 18:00");
-                messageError.Append("\n\n Puedes hacerlo de diferentes formas");
-                messageError.Append("\n\n 🐢 *Recuerdame* Ir al cine *mañana*");
-                messageError.Append("\n\n 🚀 *-R* Ir al cine *mañana*");
-                messageError.Append("\n\n 🐢 *Recuerdame* Ir al cine *mañana a las* 18:00");
-                messageError.Append("\n\n 🚀 *-R* ir al cine *mañana -H* 18:00");
-
-
+                messageError.Append(Resources.Instructions);  
 
                 await botClient.SendTextMessageAsync(
                      chatId: chatId,
