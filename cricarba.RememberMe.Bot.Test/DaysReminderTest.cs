@@ -6,12 +6,12 @@ namespace cricarba.RememberMe.Bot.Test
 {
     public class DaysReminderTest
     {
-       
+
         static object[] TestCasesSuccess =
         {
                 new object[] { "-R Hacer más test en 4 dias" },
-                new object[] { "-R Hacer más test en 4 días" },
-                new object[] { "Recuerdame Hacer más test en 13 días" },
+                //new object[] { "-R Hacer más test en 4 días" },
+                //new object[] { "Recuerdame Hacer más test en 13 días" },
                 new object[] { "Recuerdame Hacer más test en 13 dias" },
          };
 
