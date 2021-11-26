@@ -3,14 +3,16 @@ using cricarba.RememberMe.bot.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace cricarba.RememberMe.bot.Implementations
 {
     class ShortReminder : IReminderStrategy
     {
+        private readonly string regex = @"(-R)[\s][\s\S]+[\s](-D)[\s][0-3][0-9](\/)[0-1][0-9](\/)[\d]{4}[\s](-H)[\s][0-2][0-9](:)[0-5][0-9]";
+
         public Reminder GetReminder(string message)
         {
-
             var remembermeIndex = message.ToLower().IndexOf("-r");
             var dateIndex = message.ToLower().IndexOf("-d");
             var hourIndex = message.ToLower().IndexOf("-h");

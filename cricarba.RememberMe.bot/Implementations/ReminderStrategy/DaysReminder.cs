@@ -1,24 +1,24 @@
 ﻿using cricarba.RememberMe.bot.Domain;
 using cricarba.RememberMe.bot.Interfaces;
 using System;
+using System.Text.RegularExpressions;
 
 namespace cricarba.RememberMe.bot.Implementations.ReminderStrategy
 {
     public class DaysReminder : IReminderStrategy
     {
+        private readonly string regex = @"(Recuerdame|-R)[\s][\s\S]+[\s](en)[\s]\d{1,2}[\s](d)[ií](as)";
+
         public Reminder GetReminder(string message)
         {
-            var remembermeIndex = message.ToLower().IndexOf("recuerdame");
-            var shortRemembermeIndex = message.ToLower().IndexOf("-r");
-            var inIndex = message.ToLower().IndexOf("en");
-            var daysIndex = message.ToLower().IndexOf("días");
-            daysIndex = daysIndex == -1 ? message.ToLower().IndexOf("dias") : daysIndex;
-            if ((remembermeIndex >= 0 || shortRemembermeIndex >= 0) && daysIndex > 0)
+            Match match = Regex.Match(message, regex, RegexOptions.IgnoreCase);
+            var remembermeIndex = match.Groups[1].Index;          
+            var inIndex = match.Groups[2].Index;
+            var daysIndex = match.Groups[3].Index;
+           
+            if (remembermeIndex >= 0  && daysIndex > 0)
             {
-                var isShort = remembermeIndex == -1 && shortRemembermeIndex >= 0;
-                var rememberme = isShort ? message.Substring(shortRemembermeIndex, inIndex).ToLower().Replace("-r", string.Empty).Trim() :
-                                           message.Substring(remembermeIndex, inIndex).ToLower().Replace("recuerdame", string.Empty).Trim();
-
+                var rememberme =  message.Substring(remembermeIndex, inIndex).ToLower().Replace(match.Groups[1].Value.ToLower(), string.Empty).Trim();
                 var remeberDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
 
                 var endInIndex = inIndex + 2;
@@ -36,9 +36,7 @@ namespace cricarba.RememberMe.bot.Implementations.ReminderStrategy
                 {
                     var reminderMessage = $"Me dijiste 👉 *{rememberme.ToLower()}* para hoy *{remeberDate.ToShortDateString()}*   \n\n Espero no lo hayas olvidado! 😉";
 
-
                     var responseMessage = $"Te recordare \n 📖 {rememberme.ToLower().Replace("recuerdame", string.Empty)} \n 📅 en *{days}* dias";
-
 
                     return new Reminder(reminderMessage, responseMessage, remeberDate, false);
                 }
