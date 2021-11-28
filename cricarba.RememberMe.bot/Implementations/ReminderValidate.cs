@@ -20,6 +20,8 @@ namespace cricarba.RememberMe.bot.Implementations
             reminderValidatesRules.Add(new TomorrowReminderValidate());
             reminderValidatesRules.Add(new TodayReminderValidate());
             reminderValidatesRules.Add(new DaysReminderValidate());
+            reminderValidatesRules.Add(new WeeksReminderValidate());
+
         }
 
         public ReminderValidate Validate(string message)

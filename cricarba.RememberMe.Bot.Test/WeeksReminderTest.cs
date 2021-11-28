@@ -4,30 +4,30 @@ using NUnit.Framework;
 
 namespace cricarba.RememberMe.Bot.Test
 {
-    public class DaysReminderTest
+    public class WeeksReminderTest
     {
 
         static object[] TestCasesSuccess =
         {
-                new object[] { "-R Hacer más test en 4 dias" },
-                new object[] { "Recuerdame Hacer más test en 13 dias" },
+                new object[] { "-R Hacer más test en 4 semanas" },
+                new object[] { "Recuerdame Hacer más test en 13 semanas" },            
          };
 
         [Test, TestCaseSource("TestCasesSuccess")]
-        public void IsValidDayReminderTest(string message)
+        public void IsValidWeeksReminderTest(string message)
         {
-            var dayReminderValidated = new DaysReminderValidate();
-            var result = dayReminderValidated.Validate(message);
+            var weekReminderValidated = new WeeksReminderValidate();
+            var result = weekReminderValidated.Validate(message);
             Assert.IsTrue(result.IsValid);
-            Assert.IsTrue(result.ReminderType == bot.Domain.ReminderType.DaysReminder);
+            Assert.IsTrue(result.ReminderType == bot.Domain.ReminderType.WeeksReminder);
 
         }
 
         [Test, TestCaseSource("TestCasesSuccess")]
-        public void GetDayReminderTest(string message)
+        public void GetWeeksReminderTest(string message)
         {
-            var dayReminderValidated = new DaysReminder();
-            var result = dayReminderValidated.GetReminder(message);
+            var weekReminderValidated = new WeeksReminder();
+            var result = weekReminderValidated.GetReminder(message);
             Assert.IsFalse(result.IsPast);
             Assert.IsTrue(result.ReminderDate != default);
             Assert.IsFalse(string.IsNullOrEmpty(result.ResponseChatMessage));

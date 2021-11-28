@@ -7,6 +7,8 @@
         ShortReminder = 2,
         TomorrowReminder = 3,
         DaysReminder = 4,
-        TodayReminder = 5
+        TodayReminder = 5,
+        WeeksReminder = 6,
+        MonthsReminder = 7
     }
 }
