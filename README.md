@@ -6,20 +6,20 @@ Recordatorio Largo y exacto
 
 - 🐢  Recuerdame **LO QUE QUIERES QUE TE RECUERDE** el día **DD/MM/AAAA**  a las **HH:MM**
 
-Ejemplo: Recuerdame **IR AL CINE** el día  **24/09/2021** a las **18:00**
+	Ejemplo: Recuerdame **IR AL CINE** el día  **24/09/2021** a las **18:00**
 
- Recordatorio Corto y exacto
+Recordatorio Corto y exacto
 
-- 🚀 -R **LO QUE QUIERES QUE TE RECUERDE** -D DD/MM/AAA -H HH:MM
+- 🚀  -R **LO QUE QUIERES QUE TE RECUERDE** -D DD/MM/AAA -H HH:MM
 
-Ejemplo: -R **comprar leche** -D **24/09/202**1 -H **18:00**
+	Ejemplo: -R **comprar leche** -D **24/09/202**1 -H **18:00**
 
-Recordatorio para mañana
+Recordatorio para mañana con hora
 
 - 🐢 Recuerdame IR AL CINE mañana a las 18:00 o
 - 🚀 -R IR AL CINE mañana a las 18:00
 
-Puedes no agregar la hora y se creara para mañana a la misma hora que se envía el recordatorio
+Recordatorio para mañana sin hora (mañana a la misma hora)
 
 - 🐢 Recuerdame IR AL CINE mañana
 - 🚀  -R Ir al cine mañana
