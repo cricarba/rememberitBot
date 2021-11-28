@@ -1,5 +1,6 @@
 # Instrucciones para usar Remember It Bot
-
+   
+🤖 Puedes encontrar el bot en [Telegram](https://t.me/rememberit_bot)  
 📅 Formato de fechas **DD/MM/AAAA**  
 ⌚ Formato de horas **HH:MM**  
 🆘 Escribe /help para ver las instrucciones  
